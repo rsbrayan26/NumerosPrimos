@@ -1,25 +1,19 @@
-﻿List<int> nPrimos = new List<int>() { 2, 3 };
-Boolean ban;
+﻿List<int> nPrimos = new List<int>() { 2 };
 int num = 2,count;
 
 for (int i = 0; i < 100; i++)
 {
-    ban = true;
-    while (ban)
+    while (true)
     {
         count = 0;
         foreach (var item in nPrimos)
         {
-            if (num % item == 0)
-            {
-                break;
-            }
+            if (num % item == 0) break;
             count++;
         }
         if (count == nPrimos.Count)
         {
             nPrimos.Add(num);
-            ban= false;
             break;
         }
         num++;
